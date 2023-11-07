@@ -22,7 +22,9 @@ npm start
 ```
 
 No terminal informe o capitulo inicial e o final
+
 Após o download, uma pasta chamada Downloads será criada com o arquivo .txt dos capítulos baixados.
+
 A criação desse script foi motivada para realizar a leitura da novel no Kindle, para isso após baixar os capítulos, utilizo o [Calibre](https://calibre-ebook.com/) para converter o arquivo .txt para .pdf e enviar para o Kindle.
 
 ## Futuras implementações
