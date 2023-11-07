@@ -1,7 +1,7 @@
 {
   "name": "lnovel",
   "version": "1.0.0",
-  "description": "LNovelé um script node para baixar novels do site centralnovel.",
+  "description": "LNovel é um script node para baixar novels do site centralnovel.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
