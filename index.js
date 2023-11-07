@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const prompt = require('prompt-sync')();
-const { PDFDocument, rgb } = require('pdf-lib');
 const fs = require('fs');
 
 (async () => {
@@ -59,7 +58,7 @@ const fs = require('fs');
       fs.appendFileSync(fileName, `${line}\n`);
     }
   }
-  
+
   const finish = prompt('End? ');
 
   await browser.close();
