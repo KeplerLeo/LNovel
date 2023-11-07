@@ -9,18 +9,15 @@ const prompt = require('prompt-sync')();
   const vol = prompt('Volume: ');
   console.log(`Volume ${vol}`);
 
-  await page.evaluate((vol) => {
-    const spans = document.querySelectorAll('span.ts-chl-collapsible');
-    console.log(spans);
-    for (const span of spans) {
-      console.log(span.textContent);
-      if (span.textContent === `Volume ${vol}`) {
-        span.click();
-        break;
-      }
+  const spans = await page.$$('span.ts-chl-collapsible');
+  for (const span of spans) {
+    const spanText = await page.evaluate(el => el.textContent, span);
+    console.log(spanText);
+    if (spanText === "Volume  " + vol) {
+      await span.click();
     }
-  }, vol);
-
+  }
+  
   const end = prompt('End? ');
 
   await browser.close();
