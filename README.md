@@ -1,2 +1,3 @@
 # LNovel
-LNovelé um script node para baixar novels do site centralnovel.
+
+LNovel é um script node para baixar novels do site centralnovel.
