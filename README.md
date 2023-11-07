@@ -30,3 +30,7 @@ A criação desse script foi motivada para realizar a leitura da novel no Kindle
 - [ ] Baixar capítulos de outras novels
 - [ ] Baixar capítulos de outras fontes
 - [ ] Converter para .pdf com a formatação correta para o Kindle
+
+## Contribuição
+
+Pull requests são bem-vindos. Para grandes mudanças, abra um problema primeiro para discutir o que você gostaria de mudar.
