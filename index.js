@@ -1,16 +1,28 @@
 const puppeteer = require("puppeteer");
 const prompt = require("prompt-sync")();
 const fs = require("fs");
+const { log } = require("console");
 
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   await page.goto(
-    "https://centralnovel.com/series/the-beginning-after-the-end/"
+    "https://centralnovel.com/"
   );
 
-  const start = prompt("Capítulo inicial: ");
-  const end = prompt("Capítulo final: ");
+  const search = prompt("Nome da novel: ");
+  await page.type("#s", search);
+  await page.keyboard.press("Enter");
+  await page.waitForNavigation();
+
+  const novelLink = await page.$eval(
+    ".tip",
+    (tip) => tip.getAttribute("href")
+  );
+
+  await page.goto(novelLink);
+
+  await page.waitForSelector("div.ts-chl-collapsible-content a");
 
   const links = await page.$$eval(
     "div.ts-chl-collapsible-content a",
@@ -23,6 +35,11 @@ const fs = require("fs");
       return urls;
     }
   );
+
+  links.forEach((link) => console.log(link));
+
+  const start = prompt("Capítulo inicial: ");
+  const end = prompt("Capítulo final: ");
 
   const regex = new RegExp(`-capitulo-(\\d+)`);
   const urlsNoIntervalo = links.filter((url) => {

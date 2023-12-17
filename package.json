@@ -12,6 +12,6 @@
   "dependencies": {
     "pdf-lib": "^1.17.1",
     "prompt-sync": "^4.2.0",
-    "puppeteer": "^21.5.0"
+    "puppeteer": "^21.5.2"
   }
 }
