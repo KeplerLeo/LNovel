@@ -21,11 +21,13 @@ npm install
 npm start
 ```
 
-No terminal informe o nome da novel
+No terminal informe o nome da novel[^1]
 
-Selecione o capitulo inicial e final[^1]
+Selecione o capitulo inicial e final[^2]
 
-[^1]: Ainda não é possível fazer downloads de capítulos secundários ou prólogos.
+[^1]: Informe o nome de forma correta e exata, pois é isso que será usado para salvar a novel.
+
+[^2]: Ainda não é possível fazer downloads de capítulos secundários ou prólogos.
 
 Após o download, uma pasta chamada Downloads será criada com o arquivo .txt dos capítulos baixados.
 
