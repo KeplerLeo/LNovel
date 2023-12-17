@@ -75,7 +75,7 @@ const { log } = require("console");
       fs.mkdirSync("Downloads");
     }
 
-    const fileName = `Downloads/The Beginning After The End Cap ${start}-${end}.txt`;
+    const fileName = `Downloads/${search} Cap ${start}-${end}.txt`;
     for (const line of textContent) {
       fs.appendFileSync(fileName, `${line}\n`);
     }
