@@ -4,8 +4,13 @@ const fs = require("fs");
 const { log } = require("console");
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: false, executablePath: '/snap/bin/chromium' });
   const page = await browser.newPage();
+  await page.setViewport({
+    width: 1280,
+    height: 720,
+    deviceScaleFactor: 1,
+  });
   await page.goto("https://centralnovel.com/");
 
   const search = prompt("Nome da novel: ");
