@@ -4,7 +4,7 @@ const fs = require("fs");
 const { log } = require("console");
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false, executablePath: '/snap/bin/chromium' });
+  const browser = await puppeteer.launch({ headless: false, executablePath: '/usr/bin/google-chrome' });
   const page = await browser.newPage();
   await page.setViewport({
     width: 1280,
